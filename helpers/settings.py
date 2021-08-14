@@ -24,6 +24,6 @@ async def OpenSettings(m: Message, user_id: int):
         pass
     except FloodWait as e:
         await asyncio.sleep(e.x)
-        await m.edit("**😑 You Are Spamming Nibba!**")
+        await m.edit("**😑 You Are Spamming!**")
     except Exception as err:
         raise err
