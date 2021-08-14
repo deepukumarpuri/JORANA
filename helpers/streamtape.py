@@ -22,4 +22,4 @@ async def UploadToStreamtape(file: str, editable: Message, file_size: int):
             await editable.edit(text_edit, parse_mode="Markdown", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📭 Open Streamtape Link 📤", url=download_link)]]))
     except Exception as e:
         print(f"**Error: {e}**")
-        await editable.edit("**Sorry, Something went wrong!**\n\n**Can't Upload to Streamtape. You can report at [Support Group](https://t.me/AVBotz_Support)**")
+        await editable.edit("**Sorry, Something went wrong!**\n\n**Can't Upload to Streamtape. You can report at [Support Group](https://t.me/DK_BOTZ)**")
