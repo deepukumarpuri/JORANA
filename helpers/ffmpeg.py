@@ -16,7 +16,7 @@ async def MergeVideo(input_file: str, user_id: int, message: Message, format_: s
     :param format_: Pass File Extension.
     :return: This will return Merged Video File Path
     """
-    output_vid = f"{Config.DOWN_PATH}/{str(user_id)}/[@AniMesH941]_Merged.{format_.lower()}"
+    output_vid = f"{Config.DOWN_PATH}/{str(user_id)}/[@DKBOTZ]_Merged.{format_.lower()}"
     file_generator_command = [
         "ffmpeg",
         "-f",
