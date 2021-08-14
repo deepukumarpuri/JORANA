@@ -30,7 +30,7 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [[
-                         InlineKeyboardButton("👀 More Amazing Botz 🤖", url="https://t.me/AVBotz/5")]
+                         InlineKeyboardButton("👀 More Amazing Botz 🤖", url="https://t.me/DKBOTZ")]
                     ]
                 )
             )
@@ -49,7 +49,7 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [[
-                         InlineKeyboardButton("👀 More Amazing Botz 🤖", url="https://t.me/AVBotz/5")]
+                         InlineKeyboardButton("👀 More Amazing Botz 🤖", url="https://t.me/DKBOTZ")]
                     ]
                 )
             )
