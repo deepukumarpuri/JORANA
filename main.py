@@ -61,7 +61,7 @@ HELP_BUTTONS = InlineKeyboardMarkup(
 
 ABOUT_BUTTONS = InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("📮 Feedback DeV", url="https://t.me/Animesh941")],
+                [InlineKeyboardButton("📮 Feedback DeV", url="https://t.me/DKBOTZHELP")],
                 [InlineKeyboardButton("🏡 Home", callback_data="home"),
                  InlineKeyboardButton("⛔ Close", callback_data="close")]
             ]
@@ -446,7 +446,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 [
                     [InlineKeyboardButton("📂 Rename File", callback_data="renameFile_Yes"), 
                      InlineKeyboardButton("😐 Use Default", callback_data="renameFile_No")],
-                    [InlineKeyboardButton("💬 Join My Support Group 👥", url="https://t.me/AVBotz_Support")]
+                    [InlineKeyboardButton("💬 Join My Support Group 👥", url="https://t.me/DKBOTZ")]
                 ]
             )
         )
@@ -592,7 +592,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("👀 Other Botz", url="https://t.me/AVBotz/5"),
+                        InlineKeyboardButton("👀 Other Botz", url="https://t.me/DKBOTZ"),
                         InlineKeyboardButton("😐 Close", callback_data="close")
                     ]
                 ] 
@@ -701,7 +701,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             video_thumbnail=video_thumbnail,
             file_size=os.path.getsize(merged_vid_path)
         )
-        caption = f"**__© Uploaded By @AVBotz ❤️__**"
+        caption = f"**__© Uploaded By @DKBOTZ ❤️__**"
         if (await db.get_generate_ss(cb.from_user.id)) is True:
             await cb.message.edit("**Now Generating Screenshots...**")
             generate_ss_dir = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}"
