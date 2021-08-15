@@ -30,8 +30,8 @@ Check Below Buttons for more..!
 """
     ABOUT_TEXT = """
 **● Developed By : [This Person](https://t.me/DKBOTZHELP)
-● Updates Channel : [A𝕍Botz](https://t.me/DKBOTZ)
-● Support : [A𝕍Botz Support](https://t.me/DK_BOTZ)
+● Updates Channel : [DK BOTZ](https://t.me/DKBOTZ)
+● Support : [DK BOTZ Support](https://t.me/DK_BOTZ)
 ● Language : [Python 3](https://www.python.org)
 ● Library : [Pyrogram](https://docs.pyrogram.org)
 ● Server : [Heroku](https://heroku.com)
