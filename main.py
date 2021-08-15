@@ -446,7 +446,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 [
                     [InlineKeyboardButton("📂 Rename File", callback_data="renameFile_Yes"), 
                      InlineKeyboardButton("😐 Use Default", callback_data="renameFile_No")],
-                    [InlineKeyboardButton("💬 Join My Support Group 👥", url="https://t.me/DKBOTZ")]
+                    [InlineKeyboardButton("💬 Join My Support Group 👥", url="https://t.me/DK_BOTZ")]
                 ]
             )
         )
@@ -528,7 +528,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 return
             except Exception:
                 await cb.message.edit(
-                    text="**Something went Wrong Dude. Contact my [Support Group](https://t.me/AVBotz_Support).**",
+                    text="**Something went Wrong Dude. Contact my [Support Group](https://t.me/DK_BOTZ).**",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -618,7 +618,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         if (QueueDB.get(cb.from_user.id, None) is None) or (QueueDB.get(cb.from_user.id) == []):
             await cb.answer("Sorry, Your Queue is Empty!", show_alert=True)
             return
-        merged_vid_path = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/[@AniMesH941]_Merged.{FormtDB.get(cb.from_user.id).lower()}"
+        merged_vid_path = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/[@DKBOTZ]_Merged.{FormtDB.get(cb.from_user.id).lower()}"
         if cb.data.split("_", 1)[-1] == "Yes":
             await cb.message.edit("**Okay, Send me the new file name!**")
             try:
