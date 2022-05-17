@@ -381,7 +381,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 c_time = time.time()
                 file_dl_path = await bot.download_media(
                     message=i,
-                    file_name=f"{Config.DOWN_PATH}/{cb.from_user.id}/{i.message_id}/",
+                    file_name=f"{Config.DOWN_PATH}/{cb.from_user.id}/{i.id}/",
                     progress=progress_for_pyrogram,
                     progress_args=(
                         "**Downloading...**",
