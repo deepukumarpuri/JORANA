@@ -125,7 +125,7 @@ async def about_handler(bot: Client, m: Message, cb=False):
                  disable_web_page_preview=True
                      )
 
-@NubBot.on_message(filters.private & (filters.video | filters.document) & ~filters.edited)
+@NubBot.on_message(filters.private & (filters.video | filters.document) & ~filters.incoming)
 async def videos_handler(bot: Client, m: Message):
     await AddUserToDatabase(bot, m)
     Fsub = await ForceSub(bot, m)
@@ -175,7 +175,7 @@ async def videos_handler(bot: Client, m: Message):
                 text=f"**😂😂 Stop it dude,**\n**Only {str(Config.MAX_VIDEOS)} videos are allowed to merge together!**\n\n**So, Click Merge Now Button 😐**",
                 reply_markup=InlineKeyboardMarkup(markup)
             )
-@NubBot.on_message(filters.private & filters.video & ~filters.edited)
+@NubBot.on_message(filters.private & filters.video & ~filters.incoming)
 async def video_hand(bot: Client, m: Message):
     await m.reply_text(
         text=f"**I can't identify it's file name... Please Rename it or send videos in file format!**", 
@@ -186,7 +186,7 @@ async def video_hand(bot: Client, m: Message):
            )
        )
 
-@NubBot.on_message(filters.private & filters.photo & ~filters.edited)
+@NubBot.on_message(filters.private & filters.photo & ~filters.incoming)
 async def photo_handler(bot: Client, m: Message):
     await AddUserToDatabase(bot, m)
     Fsub = await ForceSub(bot, m)
