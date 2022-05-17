@@ -215,7 +215,7 @@ async def settings_handler(bot: Client, m: Message):
     await OpenSettings(editable, m.from_user.id)
 
 
-@NubBot.on_message(filters.private & filters.command("broadcast") & filters.reply & filters.user(Config.BOT_OWNER) & ~filters.edited)
+@NubBot.on_message(filters.private & filters.command("broadcast") & filters.reply & filters.user(Config.BOT_OWNER) & ~filters.incoming)
 async def _broadcast(_, m: Message):
     await broadcast_handler(m)
 
