@@ -372,7 +372,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 await cb.message.edit(
                     text=f"**Downloading ⬇️\n{media.file_name}...**")
             except MessageNotModified:
-                QueueDB.get(cb.from_user.id).remove(i.message_id)
+                QueueDB.get(cb.from_user.id).remove(i.id)
                 await cb.message.edit("**Skipped the File!**")
                 await asyncio.sleep(3)
                 continue
@@ -391,7 +391,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 )
             except Exception as downloadErr:
                 print(f"**😐 Failed to Download the Given File!**\n**Error: {downloadErr}**\n\n**Contact My Support Group - @DK_BOTZ**")
-                QueueDB.get(cb.from_user.id).remove(i.message_id)
+                QueueDB.get(cb.from_user.id).remove(i.id)
                 await cb.message.edit("**File Skipped!**")
                 await asyncio.sleep(3)
                 continue
@@ -482,7 +482,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 reply_to_message_id=message_.message_id,
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("🗑️ Remove File", callback_data=f"removeFile_{str(message_.message_id)}"), 
+                        [InlineKeyboardButton("🗑️ Remove File", callback_data=f"removeFile_{str(message_.id)}"), 
                          InlineKeyboardButton("⛔ Close", callback_data=f"close")
                         ]
                     ] 
